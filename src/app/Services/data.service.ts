@@ -17,8 +17,8 @@ export class DataService {
   }
 
 
-  addItem(cliente: Cliente): Observable<Cliente> {
+  addCliente(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(this.apiUrl, cliente);
   }
-  
+
 }
