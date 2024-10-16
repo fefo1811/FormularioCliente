@@ -1,0 +1,41 @@
+.container {
+    margin-top: 30px;
+    border-top: 1px solid #EAEAEA;
+    padding: 28px 0 0 0;
+    width: 1076px;
+
+    .linha-1 {
+        h2 {
+            font-size: 20px;
+            color: #47525E;
+            margin-bottom: 14px;
+        }
+    
+        h3 {
+            font-size: 18px;
+            color: #666666;
+            font-weight: 300;
+        }
+    }
+
+    .form-container {
+        margin-top: 54px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input, select {
+                width: 264px;
+                height: 50px;
+                border-radius: 5px;
+                border: 1px solid #8492A6;
+                font-size: 18px;
+                color: #666666;
+                padding: 12px 57px 13px 15px;
+                font-weight: 300;
+            }
+        }
+    }
+}

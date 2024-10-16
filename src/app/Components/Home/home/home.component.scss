@@ -1,0 +1,22 @@
+.caixa {
+    max-width: 1076px;
+    margin: 0 auto;
+
+    .cabecalho {
+        // border: 1px solid red;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 37px;
+            height: 37px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 1px 0  2px 21px;
+            color: #333333;
+        }
+    }
+}

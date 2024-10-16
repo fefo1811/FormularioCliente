@@ -1,0 +1,30 @@
+<main class="main-container">
+    <ng-container *ngIf="buttonClicked; then padraoTemplate; else testeTemplate"></ng-container>
+
+    <ng-template #testeTemplate>
+        <section class="container">
+            <div class="coluna-1">
+                <h2> Listagem de Usuários </h2>
+                <h3> Escolha um cliente para visualizar os detalhes </h3>
+            </div>
+        
+            <div>
+                <button class="add-button" (click)="isButtonClicked()"> Novo cliente </button>
+                <!-- <app-add-button (buttonClickEmitter)="catcherButtonEmitter($event)" ></app-add-button> -->
+            </div>
+        </section>
+        <app-user-card  *ngFor="let cliente of dadosCliente" 
+        [nome]="cliente.nome"
+        [telefone]="cliente.telefone"
+        [email]="cliente.telefone"
+        [cpf]="cliente.cpf"
+        [status]="cliente.status"
+        ></app-user-card>
+    </ng-template>
+
+    <ng-template #padraoTemplate>
+        <!-- <button class="add-button" (click)="isButtonClicked()"> Novo cliente </button> -->
+        <app-form></app-form>
+        <!-- <app-add-button (buttonClickEmitter)="catcherButtonEmitter($event)" ></app-add-button> -->
+    </ng-template>
+</main>

@@ -1,0 +1,32 @@
+{
+  "produtos": [
+        {
+          "nome": "Felipe",
+          "cpf": "48925988879",
+          "email": "email@teste.com",
+          "telefone": "(11) 99143-7284",
+          "status": "Ativo"
+        },
+        {
+          "nome": "Valentin",
+          "cpf": "12345678909",
+          "email": "valentin@teste.com",
+          "telefone": "(11) 12334-7284",
+          "status": "Desativado"
+        },
+        {
+          "nome": "Lorenzo",
+          "cpf": "12334444333",
+          "email": "lorenzo@teste.com",
+          "telefone": "(11) 65431-7284",
+          "status": "Inativo"
+        },
+        {
+          "nome": "Theo",
+          "cpf": "12223444333",
+          "email": "theo@teste.com",
+          "telefone": "(11) 1234-9876",
+          "status": "Aguardando ativação"
+        }
+    ]
+}

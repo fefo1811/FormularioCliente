@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="linha-1">
+        <h2> Novo usuário </h2>
+        <h3> Informe os campos a seguir para criar novo usuário: </h3>
+    </div>
+
+    <div class="form-container">
+        <form action="">
+            <div>
+                <input [(ngModel)]="cliente.nome"
+                type="text" 
+                name="nome" 
+                placeholder="Nome"
+                >
+            </div>
+
+            <div>
+                <input [(ngModel)]="cliente.email"
+                type="text" 
+                name="email" 
+                placeholder="E-mail"
+                >
+            </div>
+
+            <div> 
+                <input [(ngModel)]="cliente.cpf"
+                type="text" 
+                name="cpf" 
+                placeholder="CPF"
+                >
+            </div>
+
+            <div>
+                <input [(ngModel)]="cliente.telefone"
+                type="text" 
+                name="telefone" 
+                placeholder="Telefone"
+                >
+            </div>
+
+            <div>
+                <select name="status" id="">
+                    <option value=""> Ativo </option>
+                    <option value=""> Desativado </option>
+                    <option value=""> Aguardando ativação </option>
+                    <option value=""> Inativado </option>
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
