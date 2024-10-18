@@ -13,7 +13,6 @@ export class ListaComponent {
 
   ngOnInit() {
     this.dataService.getData().subscribe( (data) => this.dadosCliente = data);
-    console.log(this.dadosCliente);
   }
 
   buttonClicked: boolean = false;

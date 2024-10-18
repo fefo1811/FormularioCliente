@@ -10,7 +10,7 @@
             color: #47525E;
             margin-bottom: 14px;
         }
-    
+
         h3 {
             font-size: 18px;
             color: #666666;
@@ -26,7 +26,9 @@
             flex-direction: column;
             gap: 20px;
 
-            input, select {
+
+          .nome-cliente, .email-cliente, .telefone-cliente, .cpf-cliente, .status-cliente {
+              input, select {
                 width: 264px;
                 height: 50px;
                 border-radius: 5px;
@@ -36,6 +38,7 @@
                 padding: 12px 57px 13px 15px;
                 font-weight: 300;
             }
+          }
         }
     }
 }

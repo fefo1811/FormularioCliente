@@ -5,46 +5,63 @@
     </div>
 
     <div class="form-container">
-        <form action="">
-            <div>
+        <form action="post" (ngSubmit)="sendData()">
+            <div class="nome-cliente">
                 <input [(ngModel)]="cliente.nome"
-                type="text" 
-                name="nome" 
+                id="nome"
+                type="text"
+                name="nome"
                 placeholder="Nome"
+                class="form-input"
                 >
             </div>
 
-            <div>
+            <div class="email-cliente">
                 <input [(ngModel)]="cliente.email"
-                type="text" 
-                name="email" 
+                type="text"
+                name="email"
                 placeholder="E-mail"
+                class="form-input"
                 >
             </div>
 
-            <div> 
+            <div class="cpf-cliente">
                 <input [(ngModel)]="cliente.cpf"
-                type="text" 
-                name="cpf" 
+                type="text"
+                name="cpf"
                 placeholder="CPF"
+                class="form-input"
                 >
             </div>
 
-            <div>
+            <div class="telefone-cliente">
                 <input [(ngModel)]="cliente.telefone"
-                type="text" 
-                name="telefone" 
+                type="text"
+                name="telefone"
                 placeholder="Telefone"
+                class="form-input"
                 >
             </div>
 
-            <div>
-                <select name="status" id="">
-                    <option value=""> Ativo </option>
-                    <option value=""> Desativado </option>
-                    <option value=""> Aguardando ativação </option>
-                    <option value=""> Inativado </option>
+            <div class="status-cliente">
+                <select name="status" id="" [(ngModel)]="cliente.status" class="form-input">
+                    <option value="Ativo" selected> Ativo </option>
+                    <option value="Desativado"> Desativado </option>
+                    <option value="Aguardando ativação"> Aguardando ativação </option>
+                    <option value="Inativado"> Inativado </option>
                 </select>
+            </div>
+
+            <div>
+              <input
+              type="submit"
+              class="button-add"
+              value="Adicionar"
+              >
+              <input
+              class="button-voltar"
+              (click)="isButtonClicked()"
+              value="Voltar">
             </div>
         </form>
     </div>
