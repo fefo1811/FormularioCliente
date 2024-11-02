@@ -5,7 +5,7 @@
     </div>
 
     <div class="form-container">
-        <form action="post" (ngSubmit)="sendData()">
+        <form action="post" #form="ngForm" (ngSubmit)="sendData(form)">
             <div class="nome-cliente">
                 <input [(ngModel)]="cliente.nome"
                 id="nome"
@@ -13,16 +13,25 @@
                 name="nome"
                 placeholder="Nome"
                 class="form-input"
+                required
                 >
+                <div class="required-field" *ngIf="form.submitted && !form.controls['nome']?.valid">
+                    Nome obrigatório
+                </div>
             </div>
 
             <div class="email-cliente">
                 <input [(ngModel)]="cliente.email"
-                type="text"
+                email
+                type="email"
                 name="email"
                 placeholder="E-mail"
                 class="form-input"
+                required
                 >
+                <div class="required-field" *ngIf="form.submitted && !form.controls['email']?.valid">
+                    E-mail obrigatório
+                </div>
             </div>
 
             <div class="cpf-cliente">
@@ -31,7 +40,11 @@
                 name="cpf"
                 placeholder="CPF"
                 class="form-input"
+                required
                 >
+                <div class="required-field" *ngIf="form.submitted && !form.controls['cpf']?.valid">
+                    CPF obrigatório
+                </div>
             </div>
 
             <div class="telefone-cliente">
@@ -40,15 +53,23 @@
                 name="telefone"
                 placeholder="Telefone"
                 class="form-input"
+                required
                 >
+                <div class="required-field" *ngIf="form.submitted && !form.controls['telefone']?.valid">
+                    Telefone obrigatório
+                </div>
             </div>
 
             <div class="status-cliente">
-                <select name="status" id="" [(ngModel)]="cliente.status" class="form-input">
-                    <option value="Ativo" selected> Ativo </option>
-                    <option value="Desativado"> Desativado </option>
-                    <option value="Aguardando ativação"> Aguardando ativação </option>
-                    <option value="Inativado"> Inativado </option>
+                <select name="status" id="" [(ngModel)]="cliente.status" class="form-input" required>
+                    <option value="ativo" selected> Ativo </option>
+                    <option value="desativado"> Desativado </option>
+                    <option value="aguardando ativação"> Aguardando ativação </option>
+                    <option value="inativado"> Inativado </option>
+
+                    <div class="required-field" *ngIf="form.submitted && !form.controls['status']?.valid">
+                        Status obrigatório
+                    </div>
                 </select>
             </div>
 
